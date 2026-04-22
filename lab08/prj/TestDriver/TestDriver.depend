@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1776785488 source:c:\bmtp-lab8-yanchuk\prj\testdriver\main.cpp
+	<iostream>
+	<cmath>
+	"Modules_Yanchuk.h"
+
+1776787159 c:\bmtp-lab8-yanchuk\prj\modules_yanchuk.h
+

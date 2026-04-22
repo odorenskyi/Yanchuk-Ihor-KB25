@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1776783029 source:c:\bmtp-lab8-yanchuk\prj\modules_yanchuk\main.cpp
+	<math.h>
+	<iostream>
+

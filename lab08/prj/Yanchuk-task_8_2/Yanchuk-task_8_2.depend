@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1776788901 source:c:\users\1\desktop\lab-8\lab08\prj\yanchuk-task_8_2\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+	<conio.h>
+	"Modules_Yanchuk.h"
+
+1776787159 c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk.h
+
