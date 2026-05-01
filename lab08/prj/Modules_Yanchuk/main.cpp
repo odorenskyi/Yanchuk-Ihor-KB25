@@ -65,3 +65,20 @@ string headCircumference(int headCircumference) {
     return result.str();
 }
 
+unsigned int countBits(unsigned int number) {
+    if (number > 8999) {
+        return 0;
+    }
+
+    bool isD10Set = (number & (1 << 9)) != 0;
+    unsigned int count = 0;
+
+    for (int i = 0; i < 32; i++) {
+        bool bitIsSet = (number & (1 << i)) != 0;
+        count += (isD10Set ? bitIsSet : !bitIsSet) ? 1 : 0;
+    }
+
+    return count;
+}
+
+

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1777660567 source:c:\users\1\desktop\lab-8\lab09\prj\testdriver\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"Modules_Yanchuk.h"
+
+1777661769 c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk.h
+	<iostream>
+	<string>
+	<sstream>
+

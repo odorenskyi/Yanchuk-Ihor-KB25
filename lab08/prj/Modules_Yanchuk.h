@@ -12,4 +12,6 @@ string printWindSpeedInfo(int bofort);
 
 string headCircumference(int headCircumference);
 
+unsigned int countBits(unsigned int number);
+
 #endif // MODULES_YANCHUK_H_INCLUDED
