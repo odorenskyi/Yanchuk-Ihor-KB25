@@ -14,4 +14,6 @@ string headCircumference(int headCircumference);
 
 unsigned int countBits(unsigned int number);
 
+void Information();
+
 #endif // MODULES_YANCHUK_H_INCLUDED

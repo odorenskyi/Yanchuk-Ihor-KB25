@@ -81,4 +81,11 @@ unsigned int countBits(unsigned int number) {
     return count;
 }
 
+void Information() {
+    cout << "=======================================" << endl;
+    cout << "        Лабораторна робота №9          " << endl;
+    cout << "      Виконав: студент Ігор Янчук      " << endl;
+    cout << "=======================================" << endl;
+    cout << endl; // Додатковий порожній рядок для краси
+}
 

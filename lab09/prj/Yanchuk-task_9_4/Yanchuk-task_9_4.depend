@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1777666615 source:c:\users\1\desktop\lab-8\lab09\prj\yanchuk-task_9_4\main.cpp
+	<iostream>
+	<windows.h>
+	<Modules_Yanchuk.h>
+	<Modules_Yanchuk.h>
+
+1777665890 c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk.h
+	<iostream>
+	<string>
+	<sstream>
+
+1777665831 source:c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk\main.cpp
+	<math.h>
+	<iostream>
+	<string>
+	<sstream>
+
