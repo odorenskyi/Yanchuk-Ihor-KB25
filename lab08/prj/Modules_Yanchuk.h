@@ -16,4 +16,6 @@ unsigned int countBits(unsigned int number);
 
 void Information();
 
+void task_10_1(const string& input_file, const string& output_file);
+
 #endif // MODULES_YANCHUK_H_INCLUDED

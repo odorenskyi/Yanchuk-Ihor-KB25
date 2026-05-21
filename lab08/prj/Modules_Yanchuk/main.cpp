@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <fstream>
+#include <cctype>
 
 using namespace std;
 
@@ -89,3 +91,91 @@ void Information() {
     cout << endl; // Додатковий порожній рядок для краси
 }
 
+// Функція для розв'язання задачі 10.1
+void task_10_1(const string& input_file, const string& output_file) {
+    // Відкриваємо вхідний файл для читання та вихідний для запису
+    // Якщо вихідний файл існує, його вміст буде знищено (перезаписано)
+    ifstream fin(input_file);
+    ofstream fout(output_file);
+
+    // Перевірка статусу відкриття файлових потоків
+    if (!fin.is_open()) {
+        cerr << "Помилка: не вдалося відкрити вхідний файл " << input_file << endl;
+        return;
+    }
+    if (!fout.is_open()) {
+        cerr << "Помилка: не вдалося відкрити вихідний файл " << output_file << endl;
+        fin.close();
+        return;
+    }
+
+    string line;
+    string uppercase_letters = "";
+    int line_count = 0;
+    bool all_punct = true;
+
+    // Зчитуємо файл по рядках
+    while (getline(fin, line)) {
+        if (line.empty()) continue; // Пропускаємо порожні рядки
+
+        line_count++;
+
+        // Шукаємо символи верхнього регістру
+        for (char c : line) {
+            // isupper коректно працюватиме з кирилицею,
+            // якщо у функції main() встановлено правильну локаль
+            if (isupper((unsigned char)c)) {
+                uppercase_letters += c;
+            }
+        }
+
+        // Перевіряємо, чи закінчується рядок розділовим знаком
+        // Спочатку відкидаємо можливі невидимі символи кінця рядка (наприклад, \r у Windows)
+        while (!line.empty() && (line.back() == ' ' || line.back() == '\r' || line.back() == '\t')) {
+            line.pop_back();
+        }
+
+        if (!line.empty()) {
+            char last_char = line.back();
+            // Перевіряємо, чи є останній символ розділовим знаком
+            if (!ispunct((unsigned char)last_char)) {
+                all_punct = false;
+            }
+        }
+    }
+
+    // Записуємо результати у вихідний файл
+    // 1. Авторська інформація (інтегровані твої дані)
+    fout << "=== Авторська інформація ===\n";
+    fout << "Розробник: Янчук Ігор\n";
+    fout << "Установа: КБ-25\n";
+    fout << "Місто: Кропивницький, Україна\n";
+    fout << "Рік розробки: 2026\n\n";
+
+    // 2. Всі символи верхнього регістру
+    fout << "=== Символи верхнього регістру ===\n";
+    if (uppercase_letters.empty()) {
+        fout << "Не знайдено.\n\n";
+    } else {
+        fout << uppercase_letters << "\n\n";
+    }
+
+    // 3. Повідомлення про форматування вірша
+    fout << "=== Аналіз форматування тексту ===\n";
+    if (all_punct) {
+        fout << "Кожен рядок тексту закінчується розділовим знаком.\n";
+    } else {
+        fout << "НЕ кожен рядок тексту закінчується розділовим знаком.\n";
+    }
+
+    // Якщо рядків 4 (лише вірш) або 5 (4 рядки вірша + 1 рядок автора), вважаємо умову виконаною
+    if (line_count >= 4 && line_count <= 5) {
+        fout << "Вірш подано одним стовпчиком з чотирьох рядків.\n";
+    } else {
+        fout << "Текст НЕ відповідає формату стовпчика з чотирьох рядків (фактично рядків: " << line_count << ").\n";
+    }
+
+    // Закриваємо всі відкриті файлові потоки
+    fin.close();
+    fout.close();
+}

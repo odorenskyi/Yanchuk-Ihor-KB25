@@ -31,7 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../../../lab08/prj" />
 		</Compiler>
+		<Linker>
+			<Add library="../../../lab08/prj/Modules_Yanchuk/bin/Debug/libModules_Yanchuk.a" />
+		</Linker>
+		<Unit filename="../../../lab08/prj/Modules_Yanchuk/main.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
