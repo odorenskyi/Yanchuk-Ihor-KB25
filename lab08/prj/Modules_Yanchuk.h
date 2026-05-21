@@ -1,23 +1,30 @@
 #ifndef MODULES_YANCHUK_H_INCLUDED
 #define MODULES_YANCHUK_H_INCLUDED
-#include <iostream>
+#include <cmath>
 #include <string>
-#include <sstream>
-
 using namespace std;
 
-double s_calculation (float x, float y, float z);
+double s_calculation(double x, double y, double z);
 
-string printWindSpeedInfo(int bofort);
+double salary_calculation(double salary, int experience, double office_salary);
 
-string headCircumference(int headCircumference);
+void temperature_calculation(const double temps[], int size, double& avg_celsius, double& avg_fahrenheit);
 
-unsigned int countBits(unsigned int number);
+double analyze_bit(unsigned int N);
 
-void Information();
+string getAuthorInfo();
 
-void task_10_1(const string& input_file, const string& output_file);
+string extractUppercase(const string& filename);
 
-void task_10_2(const string& file_name);
+string checkPunctuation(const string& filename);
+
+void writePoemVertically(const string& inputFile, const string& outputFile);
+
+string getFileSizeKB(const string& filename);
+
+string getCurrentDateTime();
+
+string toBinary(int b);
+
 
 #endif // MODULES_YANCHUK_H_INCLUDED

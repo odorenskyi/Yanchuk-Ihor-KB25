@@ -3,11 +3,12 @@
 	<math.h>
 	<iostream>
 
-1779393616 source:c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk\main.cpp
-	<math.h>
+1779398165 source:c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk\main.cpp
 	<iostream>
-	<string>
-	<sstream>
+	<cmath>
+	<bitset>
 	<fstream>
+	<string>
+	<ctime>
 	<cctype>
 
