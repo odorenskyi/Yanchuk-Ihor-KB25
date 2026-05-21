@@ -5,6 +5,8 @@
 #include <sstream>
 #include <fstream>
 #include <cctype>
+#include <ctime>
+#include <iomanip>
 
 using namespace std;
 
@@ -177,5 +179,46 @@ void task_10_1(const string& input_file, const string& output_file) {
 
     // Закриваємо всі відкриті файлові потоки
     fin.close();
+    fout.close();
+}
+
+// Функція для розв'язання задачі 10.2
+void task_10_2(const string& file_name) {
+    // ЕТАП 1: Визначення розміру файлу
+    // Відкриваємо файл для читання. Режим ios::ate (at end) одразу ставить вказівник у кінець файлу
+    ifstream fin(file_name, ios::binary | ios::ate);
+
+    if (!fin.is_open()) {
+        cerr << "Помилка: не вдалося відкрити файл " << file_name << " для визначення розміру." << endl;
+        return;
+    }
+
+    // tellg() повертає поточну позицію вказівника (оскільки ми в кінці - це розмір у байтах)
+    streampos size_in_bytes = fin.tellg();
+    fin.close(); // Закриваємо файл, ми дізналися все, що треба
+
+    // Переводимо байти у кілобайти (ділимо на 1024.0 для збереження дробової частини)
+    double size_in_kb = static_cast<double>(size_in_bytes) / 1024.0;
+
+    // ЕТАП 2: Отримання поточної дати та часу
+    // Використовуємо стандартну бібліотеку <ctime>
+    time_t now = time(nullptr);
+    string current_time = ctime(&now); // ctime автоматично додає символ нового рядка '\n' в кінці
+
+    // ЕТАП 3: Дозапис інформації у файл
+    // Відкриваємо той самий файл, але тепер для виведення (ofstream) у режимі дозапису (ios::app)
+    ofstream fout(file_name, ios::app);
+
+    if (!fout.is_open()) {
+        cerr << "Помилка: не вдалося відкрити файл " << file_name << " для дозапису." << endl;
+        return;
+    }
+
+    // Дописуємо дані у файл
+    fout << "\n\n=== Інформація від модуля 10.2 ===\n";
+    fout << "Об'єм цього файлу (до дозапису): " << fixed << setprecision(3) << size_in_kb << " КБ\n";
+    fout << "Дата й час модифікації: " << current_time;
+
+    // Закриваємо файловий потік
     fout.close();
 }

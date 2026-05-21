@@ -18,4 +18,6 @@ void Information();
 
 void task_10_1(const string& input_file, const string& output_file);
 
+void task_10_2(const string& file_name);
+
 #endif // MODULES_YANCHUK_H_INCLUDED
