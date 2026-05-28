@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1779978985 source:c:\users\1\desktop\lab-8\lab11\prj\file_manager\main.cpp
+	"operator_directory.h"
+	<fstream>
+	<sstream>
+
+1779978872 c:\users\1\desktop\lab-8\lab11\prj\operator_directory.h
+	<iostream>
+	<string>
+	<vector>
+
