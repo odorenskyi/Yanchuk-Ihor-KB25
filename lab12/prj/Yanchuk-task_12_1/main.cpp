@@ -1,7 +1,11 @@
 #include <iostream>
 #include <string>
 
+#include "Modules_Yanchuk.h"
+
 using namespace std;
+
+
 
 // Клас, що моделює сутність предметної області (Рекламний щит / Прямокутник)
 
@@ -59,6 +63,8 @@ public:
 
 // Головна функція для демонстрації роботи програми
 int main() {
+    setlocale(LC_ALL, "ukr");
+    cout <<getAuthorInfo()<< endl;
     // Налаштування кодування для коректного відображення української мови в консолі
     setlocale(LC_ALL, "Ukrainian");
 
