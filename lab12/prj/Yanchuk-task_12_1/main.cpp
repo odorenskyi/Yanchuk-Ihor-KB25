@@ -14,7 +14,7 @@ private:
 public:
     // 1. Конструктор класу — Виноска 1
     // Ініціалізує атрибути під час створення об'єкта
-    ClassLab12_Yanhcuk(double a, double b) {
+    ClassLab12_Yanchuk(double a, double b) {
         // Викликаємо сеттери, щоб одразу спрацювала валідація вхідних даних
         setSideA(a);
         setSideB(b);
