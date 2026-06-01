@@ -7,16 +7,12 @@ using namespace std;
 
 int main() {
 
-
-
     setlocale(LC_ALL, "ukr");
-
-    cout <<getAuthorInfo()<< endl;
 
     // 1. Перевірка місця розташування файлу main.cpp
     string currentFile = __FILE__;
-    bool isCorrectPath = (currentFile.find("\\lab12\\prj\\Yanchuk-task_12_1") != string::npos) ||
-                         (currentFile.find("/lab12/prj/Yanchuk-task_12_1") != string::npos);
+    bool isCorrectPath = (currentFile.find("\\Lab12\\prj\\Yanchuk-task_12_1") != string::npos) ||
+                         (currentFile.find("/Lab12/prj/Yanchuk-task_12_1") != string::npos);
 
     // Якщо шлях порушено
     if (!isCorrectPath) {

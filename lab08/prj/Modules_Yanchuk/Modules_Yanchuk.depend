@@ -3,7 +3,7 @@
 	<math.h>
 	<iostream>
 
-1779398165 source:c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk\main.cpp
+1780339610 source:c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk\main.cpp
 	<iostream>
 	<cmath>
 	<bitset>
@@ -11,4 +11,9 @@
 	<string>
 	<ctime>
 	<cctype>
+	"Modules_Yanchuk.h"
+
+1780339438 c:\users\1\desktop\lab-8\lab08\prj\modules_yanchuk.h
+	<cmath>
+	<string>
 

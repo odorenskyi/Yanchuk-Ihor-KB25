@@ -26,5 +26,24 @@ string getCurrentDateTime();
 
 string toBinary(int b);
 
+class ClassLab12_Yanchuk {
+private:
+    // Закриті атрибути (довжини сторін білборда)
+    double sideA;
+    double sideB;
+
+public:
+    // Конструктор з параметрами за замовчуванням
+    ClassLab12_Yanchuk(double a = 1.0, double b = 1.0);
+
+    // Геттери (функції для отримання значень)
+    double getSideA() const;
+    double getSideB() const;
+    double getArea() const;
+
+    // Сеттери (функції для зміни значень)
+    void setSideA(double a);
+    void setSideB(double b);
+};
 
 #endif // MODULES_YANCHUK_H_INCLUDED

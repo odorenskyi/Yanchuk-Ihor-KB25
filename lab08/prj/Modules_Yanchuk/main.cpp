@@ -5,6 +5,7 @@
 #include <string>
 #include <ctime>
 #include <cctype>
+#include "Modules_Yanchuk.h"
 
 
 using namespace std;
@@ -130,3 +131,37 @@ string toBinary(int b) {
     return bitset<16>(b).to_string();
 }
 
+
+// Реалізація конструктора з початковою ініціалізацією
+ClassLab12_Yanchuk::ClassLab12_Yanchuk(double a, double b) {
+    // Елементарна валідація: сторона має бути більша за нуль
+    if (a > 0) { sideA = a; } else { sideA = 1.0; }
+    if (b > 0) { sideB = b; } else { sideB = 1.0; }
+}
+
+// Реалізація геттерів
+double ClassLab12_Yanchuk::getSideA() const {
+    return sideA;
+}
+
+double ClassLab12_Yanchuk::getSideB() const {
+    return sideB;
+}
+
+double ClassLab12_Yanchuk::getArea() const {
+    // Площа прямокутника (S = a * b)
+    return sideA * sideB;
+}
+
+// Реалізація сеттерів (з валідацією)
+void ClassLab12_Yanchuk::setSideA(double a) {
+    if (a > 0) {
+        sideA = a;
+    }
+}
+
+void ClassLab12_Yanchuk::setSideB(double b) {
+    if (b > 0) {
+        sideB = b;
+    }
+}
